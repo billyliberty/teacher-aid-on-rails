@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :supply_items
   resources :event_shifts
   resources :supply_lists
   resources :events

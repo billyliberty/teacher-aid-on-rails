@@ -1,0 +1,2 @@
+class SupplyItemsController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class SupplyItem < ApplicationRecord
+end
