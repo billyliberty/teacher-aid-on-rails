@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :supply_lists
   resources :events
   resources :parents
   resources :teachers

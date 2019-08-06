@@ -1,0 +1,2 @@
+class SupplyList < ApplicationRecord
+end
