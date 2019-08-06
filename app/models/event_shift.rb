@@ -1,0 +1,2 @@
+class EventShift < ApplicationRecord
+end
