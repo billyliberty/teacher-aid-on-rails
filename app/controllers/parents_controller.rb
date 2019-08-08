@@ -4,6 +4,13 @@ class ParentsController < ApplicationController
     end
 
     def create
+        @parent = Parent.new(parent_params)
+        if @parent.save
+            session[:parent_id] = @parent.parent_id
+            redirect_to parent_path(@parent)
+        else
+            render 'parents/new'
+        end
     end
 
     def show
@@ -17,5 +24,10 @@ class ParentsController < ApplicationController
 
     def destroy
     end
-    
+
+    private
+
+    def parent_params
+    end
+
 end
