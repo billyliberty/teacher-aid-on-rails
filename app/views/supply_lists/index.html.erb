@@ -1,1 +1,11 @@
-Displays index of lists of needed items.
+<h1>All Supply Lists and Events!</h1>
+
+<ul>
+<% @supply_lists.each do |s|%>
+  <li><%= link_to s.title, supply_list_path(s) %></li>
+<% end %>
+</ul>
+<br>
+<% @events.each do |e|%>
+  <li><%= link_to e.title, events_path(e) %></li>
+<% end %>
