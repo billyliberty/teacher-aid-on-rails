@@ -2,10 +2,10 @@
 
 <ul>
 <% @supply_lists.each do |s|%>
-  <li><%= link_to s.title, supply_list_path(s) %></li>
+  <li><%= link_to s.name, supply_list_path(s) %></li>
 <% end %>
 </ul>
 <br>
 <% @events.each do |e|%>
-  <li><%= link_to e.title, events_path(e) %></li>
+  <li><%= link_to e.name, events_path(e) %></li>
 <% end %>
