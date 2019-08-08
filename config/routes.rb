@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :event_shifts
   resources :supply_lists
   resources :events
-  resources :parents
+  resources :parents, only: [:new, :create, :show]
   resources :teachers
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
