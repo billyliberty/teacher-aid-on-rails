@@ -14,6 +14,9 @@ class ParentsController < ApplicationController
     end
 
     def show
+        redirect_if_not_logged_in_parent
+        @parent = Parent.find_by_id(params[:id])
+        redirect_to '/' if !@parent
     end
 
     def edit
@@ -32,7 +35,7 @@ class ParentsController < ApplicationController
     private
 
     def parent_params
-
+        params.require(:parent).permit(:name, :email, :password)
     end
 
     def set_parent
